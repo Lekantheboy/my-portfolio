@@ -6,12 +6,12 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --text-color: #1f2937;
-    --light-text: #6b7280;
-    --background: #ffffff;
-    --section-bg: #f3f4f6;
+    --primary-color: #9333ea; /* Vibrant Purple (Alternative to Blue) */
+    --secondary-color: #7e22ce; /* Darker Purple */
+    --text-color: #374151; /* Slightly Darker for Better Readability */
+    --light-text: #9ca3af; /* Softer Light Gray */
+    --background: #ffffff; /* Keeping White for Clean Look */
+    --section-bg: #f9fafb; /* Slightly Lighter for Softer Contrast */
     --transition: all 0.3s ease;
 }
 
