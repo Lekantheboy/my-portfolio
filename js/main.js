@@ -107,6 +107,26 @@ if (form) {
     });
 }
 
+// =============== Project Tabs Functionality ===============
+document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const projectCard = button.closest('.project-card');
+            const tabName = button.getAttribute('data-tab');
+            
+            // Remove active class from all tabs in this project card
+            projectCard.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            projectCard.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            button.classList.add('active');
+            projectCard.querySelector(`#${tabName}`).classList.add('active');
+        });
+    });
+});
+
 // =============== Window Load Event ===============
 window.addEventListener('load', () => {
     // Check if stats section is already in view on page load

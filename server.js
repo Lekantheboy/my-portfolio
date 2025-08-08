@@ -7,6 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static('.')); // Serve static files from current directory
 
 // Configure nodemailer
 const transporter = nodemailer.createTransport({
