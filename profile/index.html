@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekan-folio</title>
+    <link rel="icon" href="images/fav-icon.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="#home">LekantheeDev</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Lekan</span></h1>
+            <h2>Full-Stack Web Developer</h2>
+            <p>Building complete web applications from frontend to backend with modern technologies, secure authentication, and scalable architecture.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a full-stack developer passionate about building complete web applications 
+                    from concept to deployment. I specialize in modern web technologies including 
+                    React, Node.js, PHP, and Laravel, creating secure, scalable solutions with 
+                    robust backend systems and intuitive user interfaces.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3 data-target="2" class="counter">0</h3>
+                        <p>Year Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 data-target="6" class="counter">0</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 data-target="11" class="counter"></h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-categories">
+            <div class="skill-category">
+                <h3 class="category-title">Frontend</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-html5"></i>
+                        <h4>HTML5</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt"></i>
+                        <h4>CSS3</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt"></i>
+                        <h4>Tailwind CSS</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-js"></i>
+                        <h4>JavaScript</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Intermediate</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-react"></i>
+                        <h4>React</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Intermediate</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-github"></i>
+                        <h4>Next.js</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Intermediate</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="category-title">Backend</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-node"></i>
+                        <h4>Node.js</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Intermediate</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-server"></i>
+                        <h4>Express.js</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Intermediate</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-laravel"></i>
+                        <h4>Laravel (PHP)</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h4>MySQL</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="category-title">DevOps & Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-git-alt"></i>
+                        <h4>Git</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <h4>VS Code</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-cursor"></i>
+                        <h4>Cursor</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-figma"></i>
+                        <h4>Figma</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Intermediate</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-paper-plane"></i>
+                        <h4>Postman</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="category-title">APIs & Integrations</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-link"></i>
+                        <h4>RESTful APIs</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Intermediate</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>GraphQL</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Intermediate</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-plug"></i>
+                        <h4>Third-party Integrations</h4>
+                        <div class="skill-level">
+                            <span class="level-text">Advanced</span>
+                            <div class="level-bar">
+                                <div class="level-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="images/Screenshot1.png" alt="Special Foundation">
+                <div class="project-info">
+                    <h3>Special Foundation</h3>
+                    <p>A foundation that empowers young African leaders through education and leadership opportunities.</p>
+                    <div class="project-tabs">
+                        <button class="tab-btn active" data-tab="frontend">Frontend</button>
+                        <button class="tab-btn" data-tab="backend">Backend</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="frontend">
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>TailwindCSS/CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="backend">
+                            <div class="backend-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Admin Authentication System</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Analytics Dashboard with Charts</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-edit"></i>
+                                    <span>Dynamic Content Management</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    <span>Event & Program Management</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>User Application System</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://thespecialfoundation.org" class="btn">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="images/bloom.png" alt="Bloom Digit Media">
+                <div class="project-info">
+                    <h3>Bloom Digit Media</h3>
+                    <p>The official website of one of the best digital advertising agencies in Nigeria.</p>
+                    <div class="project-tabs">
+                        <button class="tab-btn active" data-tab="frontend">Frontend</button>
+                        <button class="tab-btn" data-tab="backend">Backend</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="frontend">
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>TailwindCSS/CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="backend">
+                            <div class="backend-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email Integration</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>Appointment Booking System</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Time Slot Restrictions</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-newspaper"></i>
+                                    <span>Newsletter Subscription</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://bloomdigitmedia.com" class="btn">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="images/billing.png" alt="Billing.ad">
+                <div class="project-info">
+                    <h3>Billing.ad</h3>
+                    <p>A comprehensive financial platform for secure money management, payments, and currency conversion.</p>
+                    <div class="project-tabs">
+                        <button class="tab-btn active" data-tab="frontend">Frontend</button>
+                        <button class="tab-btn" data-tab="backend">Backend</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="frontend">
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>TailwindCSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="backend">
+                            <div class="backend-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-users-cog"></i>
+                                    <span>Multi-Auth System (Admin/User)</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fab fa-google"></i>
+                                    <span>Google OAuth Integration</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Flutterwave Payment Integration</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-exchange-alt"></i>
+                                    <span>Currency Conversion API</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>2FA Security System</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email Verification</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>User Settings Panel</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-user-shield"></i>
+                                    <span>Admin CRUD Operations</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="images/Screenshot4.png" alt="SharePadi">
+                <div class="project-info">
+                    <h3>SharePadi</h3>
+                    <p>An affordable advertising solution to make your marketing campaign a success.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>TailwindCSS/CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://Sharepadi.bloomdigitmedia.com" class="btn">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="images/bloom_academy.png" alt="Bloom Academy">
+                <div class="project-info">
+                    <h3>Bloom Academy</h3>
+                    <p>An online platform/academy for learning and career development.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>TailwindCSS/CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://bloomdigitmedia.com" class="btn">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>olusanuemmanuel@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <p>Abuja, Nigeria</p>
+                </div>
+                            <div class="social-links">
+                <a href="https://github.com/Lekantheboy"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/emmanuel-olusanu-511a74221"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/lekantheboy?igsh=MWliMmFwN3dkZ2w4dg%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="resume-download">
+                <a href="asset/lekanResume.pdf" download class="btn primary">
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </a>
+            </div>
+            </div>
+            <!-- <form action="https://formspree.io/f/xyzkpgdj" method="POST" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="full_name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="_replyto" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" required placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" required placeholder="Your Message"></textarea>
+                </div> -->
+                <!-- Add these hidden fields -->
+                <!-- <input type="hidden" name="_subject" value="New Contact Form Submission">
+                <input type="hidden" name="_format" value="plain"> -->
+                <!-- Disable captcha -->
+                <!-- <input type="hidden" name="_captcha" value="false"> -->
+                <!-- Prevent spam -->
+                <!-- <input type="text" name="_gotcha" style="display:none">
+                <button type="submit" class="btn primary">Send Message</button>
+            </form> -->
+            <form action="mailto:olusanuemmanuel@gmail.com" method="POST" enctype="text/plain">
+
+                <div class="form-group">
+                    <input type="text" name="full_name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" required placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; All rights reserved.</p>
+        </div>
+        <!-- <div class="footer-content">
+            <p>&copy; 2025 Mide.dev. All rights reserved.</p>
+        </div> -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
