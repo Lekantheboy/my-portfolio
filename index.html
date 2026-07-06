@@ -26,16 +26,16 @@
   ═══════════════════════════════════════ -->
   <header class="site-nav" id="site-nav" role="banner">
     <nav class="nav-inner" aria-label="Main navigation">
-      <a href="#home" class="nav-logo" aria-label="Lekan — home">Lekan</a>
+      <a href="index.html" class="nav-logo" aria-label="Lekan — home">Lekan</a>
 
       <ul class="nav-links" role="list">
-        <li><a href="#work" class="nav-link" id="nav-work">WORK</a></li>
-        <li><a href="#about" class="nav-link" id="nav-about">ABOUT</a></li>
-        <li><a href="#contact" class="nav-link" id="nav-contact">CONTACT</a></li>
+        <li><a href="work.html" class="nav-link" id="nav-work">WORK</a></li>
+        <li><a href="about.html" class="nav-link" id="nav-about">ABOUT</a></li>
+        <li><a href="contact.html" class="nav-link" id="nav-contact">CONTACT</a></li>
       </ul>
 
       <div class="nav-right">
-        <a href="#contact" class="nav-availability" aria-label="Currently available for projects">
+        <a href="contact.html" class="nav-availability" aria-label="Currently available for projects">
           <span class="availability-dot" aria-hidden="true"></span>
           AVAILABLE FOR PROJECTS
         </a>
@@ -67,9 +67,9 @@
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <ul role="list">
-        <li><a href="#work" class="mobile-link">WORK</a></li>
-        <li><a href="#about" class="mobile-link">ABOUT</a></li>
-        <li><a href="#contact" class="mobile-link">CONTACT</a></li>
+        <li><a href="work.html" class="mobile-link">WORK</a></li>
+        <li><a href="about.html" class="mobile-link">ABOUT</a></li>
+        <li><a href="contact.html" class="mobile-link">CONTACT</a></li>
       </ul>
     </div>
   </header>
@@ -82,23 +82,48 @@
     <section id="home" class="section-home" aria-labelledby="home-heading">
 
       <div class="home-hero">
-        <div class="hero-meta">
+        <div class="hero-meta animate-fade-down">
           <span class="meta-tag">BASED IN ABUJA, NG</span>
           <span class="meta-tag">FULL-STACK ENGINEER</span>
         </div>
 
         <h1 id="home-heading" class="hero-title">
-          Building complete<br>
-          web experiences,<br>
-          <em>front to back.</em>
+          <span class="hero-word" style="--i:0">Building</span>
+          <span class="hero-word" style="--i:1">complete</span><br>
+          <span class="hero-word" style="--i:2">web</span>
+          <span class="hero-word" style="--i:3">experiences,</span><br>
+          <em class="hero-word hero-em" style="--i:4">front to back.</em>
         </h1>
 
-        <div class="hero-sub-row">
+        <div class="hero-sub-row animate-fade-up" style="animation-delay: 0.5s">
           <p class="hero-sub text-body">
             Full-stack developer passionate about crafting secure, scalable web applications — from intuitive user
             interfaces to robust backend systems.
           </p>
           <p class="hero-scroll" aria-hidden="true">SCROLL TO EXPLORE ↓</p>
+        </div>
+      </div>
+
+      <!-- Marquee strip -->
+      <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-track">
+          <span>FULL-STACK</span><span class="marquee-dot">·</span>
+          <span>REACT</span><span class="marquee-dot">·</span>
+          <span>NODE.JS</span><span class="marquee-dot">·</span>
+          <span>POSTGRESQL</span><span class="marquee-dot">·</span>
+          <span>LARAVEL</span><span class="marquee-dot">·</span>
+          <span>TYPESCRIPT</span><span class="marquee-dot">·</span>
+          <span>UI DESIGN</span><span class="marquee-dot">·</span>
+          <span>API ARCHITECTURE</span><span class="marquee-dot">·</span>
+          <!-- duplicate for seamless loop -->
+          <span>FULL-STACK</span><span class="marquee-dot">·</span>
+          <span>REACT</span><span class="marquee-dot">·</span>
+          <span>NODE.JS</span><span class="marquee-dot">·</span>
+          <span>POSTGRESQL</span><span class="marquee-dot">·</span>
+          <span>LARAVEL</span><span class="marquee-dot">·</span>
+          <span>TYPESCRIPT</span><span class="marquee-dot">·</span>
+          <span>UI DESIGN</span><span class="marquee-dot">·</span>
+          <span>API ARCHITECTURE</span><span class="marquee-dot">·</span>
         </div>
       </div>
 
@@ -151,15 +176,15 @@
 
           <!-- Card 3 — left (below card 1) -->
           <article class="project-card project-card--col-left reveal" role="listitem">
-            <a href="https://bloomdigitmedia.com" target="_blank" rel="noopener noreferrer"
-              class="project-card-link" aria-label="View Bloom Digit Media project">
+            <a href="https://bloomdigitmedia.com" target="_blank" rel="noopener noreferrer" class="project-card-link"
+              aria-label="View Bloom Digit Media project">
               <div class="project-card-image-wrap">
                 <img src="images/bloom.png" alt="Bloom Digit Media agency" loading="lazy" class="img-bw">
                 <span class="project-card-arrow" aria-hidden="true">↗</span>
               </div>
             </a>
             <div class="project-card-info">
-              <h3 class="project-card-name">Bloom Digit Media</h3>
+              <h3 class="project-card-name">Bloom Digital Media</h3>
               <div class="project-card-tags">
                 <span>HTML/CSS</span>
                 <span>JAVASCRIPT</span>
@@ -177,394 +202,8 @@
           Let's work together to create<br>
           <em>something extraordinary.</em>
         </p>
-        <a href="mailto:olusanuemmanuel@gmail.com" class="home-cta-email">olusanuemmanuel@gmail.com</a>
-      </div>
-
-    </section>
-
-
-    <!-- ═══════════════════════════════════════
-         WORK SECTION
-    ═══════════════════════════════════════ -->
-    <section id="work" class="section-work" aria-labelledby="work-heading">
-
-      <div class="work-header">
-        <div class="work-header-left">
-          <p class="work-label">SELECTED WORKS 2022–2024</p>
-          <h2 id="work-heading" class="work-title">
-            Selected<br>
-            <em>Systems & Logic</em>
-          </h2>
-        </div>
-        <p class="work-intro">
-          An inquiry into high-performance web architectures and the craft of clean execution. Curating technical
-          excellence through minimal, resilient engineering — from authentication systems to real-time data pipelines.
-        </p>
-      </div>
-
-      <!-- Work projects -->
-      <div class="work-projects">
-
-        <!-- Row 1: Large left image + right text (Bloom Academy LMS — FEATURED) -->
-        <article class="work-project work-project--row-hero reveal" aria-labelledby="wp0-title">
-          <div class="work-project-image">
-            <img src="images/bloom_academy.png" alt="Bloom Academy LMS" loading="eager" class="img-bw">
-          </div>
-          <div class="work-project-details">
-            <div class="work-project-meta">
-              <span class="wp-tag wp-tag--live">● LIVE</span>
-              <span class="wp-tag">FULLSTACK</span>
-              <span class="wp-tag">REACT</span>
-              <span class="wp-tag">NODE.JS</span>
-            </div>
-            <h3 id="wp0-title" class="wp-title">Bloom Academy LMS</h3>
-            <p class="wp-desc text-body">A full multi-tenant Learning Management System built entirely solo — from
-              architecture to deployment. Supports multiple institutions each with their own branding, courses,
-              instructors, and students. Features include course builder, assessment engine, certification, payment
-              integration, discussion forums, and real-time notifications.</p>
-            <div class="wp-sub-details">
-              <div><p class="wp-sub-label">PLATFORM</p><p class="wp-sub-value">React / Node.js / PostgreSQL</p></div>
-              <div><p class="wp-sub-label">DOMAIN</p><p class="wp-sub-value">EdTech / SaaS</p></div>
-              <div><p class="wp-sub-label">BUILT BY</p><p class="wp-sub-value">Solo — Full Stack</p></div>
-            </div>
-            <a href="https://app.bloomacademyafrica.com" target="_blank" rel="noopener noreferrer" class="wp-link">VIEW LIVE PRODUCT →</a>
-          </div>
-        </article>
-
-        <!-- Row 2: Small image top-right, text left + below (Special Foundation) -->
-        <article class="work-project work-project--row-offset reveal" aria-labelledby="wp1-title">
-          <div class="work-project-details">
-            <div class="work-project-meta">
-              <span class="wp-tag">FULLSTACK</span>
-              <span class="wp-tag">LARAVEL</span>
-              <span class="wp-tag">REACT</span>
-            </div>
-            <h3 id="wp1-title" class="wp-title">Special Foundation</h3>
-            <p class="wp-desc text-body">A foundation platform empowering young African leaders through education and
-              leadership opportunities. Features admin authentication, dynamic content management, analytics dashboard,
-              and a full event management system.</p>
-            <div class="wp-sub-details">
-              <div><p class="wp-sub-label">PLATFORM</p><p class="wp-sub-value">Laravel / PHP</p></div>
-              <div><p class="wp-sub-label">DOMAIN</p><p class="wp-sub-value">Education / NGO</p></div>
-            </div>
-            <a href="https://thespecialfoundation.org" target="_blank" rel="noopener noreferrer" class="wp-link">SOURCE WORK →</a>
-          </div>
-          <div class="work-project-image">
-            <img src="images/Screenshot1.png" alt="Special Foundation platform" loading="lazy" class="img-bw">
-          </div>
-        </article>
-
-        <!-- Row 3: Featured hero full-width (Billing.ad) -->
-        <article class="work-project work-project--row-featured reveal" aria-labelledby="wp2-title">
-          <div class="work-project-image">
-            <img src="images/billing.png" alt="Billing.ad financial platform" loading="lazy" class="img-bw">
-            <div class="work-featured-overlay">
-              <div class="work-project-meta">
-                <span class="wp-tag wp-tag--light">FULLSTACK</span>
-                <span class="wp-tag wp-tag--light">REACT</span>
-                <span class="wp-tag wp-tag--light">NODE.JS</span>
-              </div>
-              <h3 id="wp2-title" class="wp-title">Billing.ad</h3>
-              <p class="wp-desc text-body">A comprehensive financial platform for secure money management, payments, and
-                currency conversion. Built with multi-auth, Google OAuth, Flutterwave, 2FA.</p>
-              <a href="#" class="wp-link">IN DEVELOPMENT →</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Row 4: Two-column side-by-side (Bloom Digit + SharePadi) -->
-        <div class="work-project work-project--row-pair reveal">
-          <article aria-labelledby="wp3-title" class="work-pair-item">
-            <div class="work-project-image">
-              <img src="images/bloom.png" alt="Bloom Digit Media website" loading="lazy" class="img-bw">
-            </div>
-            <div class="work-project-details">
-              <div class="work-project-meta">
-                <span class="wp-tag">FRONTEND</span>
-                <span class="wp-tag">JAVASCRIPT</span>
-              </div>
-              <h3 id="wp3-title" class="wp-title">Bloom Digit Media</h3>
-              <p class="wp-desc text-body">The official digital presence for one of Nigeria's leading advertising
-                agencies. Includes appointment booking, newsletter integration, and a full email notification system.</p>
-              <a href="https://bloomdigitmedia.com" target="_blank" rel="noopener noreferrer" class="wp-link">SOURCE WORK →</a>
-            </div>
-          </article>
-          <article aria-labelledby="wp4-title" class="work-pair-item">
-            <div class="work-project-image">
-              <img src="images/Screenshot4.png" alt="SharePadi platform" loading="lazy" class="img-bw">
-            </div>
-            <div class="work-project-details">
-              <div class="work-project-meta">
-                <span class="wp-tag">FRONTEND</span>
-                <span class="wp-tag">TAILWIND</span>
-              </div>
-              <h3 id="wp4-title" class="wp-title">SharePadi</h3>
-              <p class="wp-desc text-body">An affordable advertising solution for marketing campaigns, making
-                professional promotion accessible to Nigerian businesses of all sizes.</p>
-              <a href="https://Sharepadi.bloomdigitmedia.com" target="_blank" rel="noopener noreferrer" class="wp-link">SOURCE WORK →</a>
-            </div>
-          </article>
-        </div>
-
-      </div>
-
-      <!-- Work quote -->
-      <blockquote class="work-quote reveal">
-        <p>"Complexity is the enemy of reliability. The best systems are those that vanish into their own efficiency."
-        </p>
-      </blockquote>
-
-    </section>
-
-
-    <!-- ═══════════════════════════════════════
-         ABOUT SECTION
-    ═══════════════════════════════════════ -->
-    <section id="about" class="section-about" aria-labelledby="about-heading">
-
-      <!-- About Hero -->
-      <div class="about-hero">
-        <div class="about-hero-text">
-          <h2 id="about-heading" class="about-title">
-            Crafting complete<br>
-            web systems with<br>
-            <em>architectural intent.</em>
-          </h2>
-          <p class="about-body">
-            I am a full-stack developer and interface builder based in Abuja, Nigeria. I build high-performance web
-            applications at the intersection of clean backend logic and fluid frontend aesthetics — prioritising
-            clarity, speed, and structural integrity in every system I ship.
-          </p>
-        </div>
-        <div class="about-hero-image">
-          <img src="images/arc.png" alt="Architecture cityscape — Lekan's portfolio" loading="lazy"
-            width="480" height="560">
-        </div>
-      </div>
-
-      <!-- Core Competencies -->
-      <div class="competencies">
-        <h3 class="competencies-heading">Core Competencies</h3>
-        <div class="competencies-grid">
-
-          <div class="competency reveal">
-            <p class="competency-number">01 / FRONTEND</p>
-            <h4 class="competency-title">The Interface</h4>
-            <p class="competency-desc">Building reactive, performant interfaces that respect the user's focus. Expertise
-              in advanced React patterns, state orchestration, and fluid typography.</p>
-            <ul class="competency-list" role="list">
-              <li>→ React / Next.js</li>
-              <li>→ Tailwind / CSS</li>
-              <li>→ Framer Motion</li>
-              <li>→ Media / Types</li>
-            </ul>
-          </div>
-
-          <div class="competency reveal">
-            <p class="competency-number">02 / BACKEND</p>
-            <h4 class="competency-title">The Engine</h4>
-            <p class="competency-desc">Developing robust APIs and scalable server-side systems. Focused on type-safety,
-              efficient data modelling, and seamless integration layers.</p>
-            <ul class="competency-list" role="list">
-              <li>→ Node.js / TypeScript</li>
-              <li>→ Laravel / PHP</li>
-              <li>→ MySQL / PostgreSQL</li>
-              <li>→ RESTful APIs</li>
-            </ul>
-          </div>
-
-          <div class="competency reveal">
-            <p class="competency-number">03 / TOOLING</p>
-            <h4 class="competency-title">The Foundation</h4>
-            <p class="competency-desc">Provisioning resilient development environments and streamlined workflows,
-              ensuring stability from local development to production deployment.</p>
-            <ul class="competency-list" role="list">
-              <li>→ Git / GitHub</li>
-              <li>→ Docker / Vercel</li>
-              <li>→ GitHub Actions</li>
-              <li>→ Postman / Testing</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Philosophy -->
-      <div class="philosophy reveal">
-        <h3 class="philosophy-title">The Philosophy</h3>
-        <blockquote class="philosophy-quote">
-          "I believe code should be as <em class="green">readable</em> as a well-set page of typography. Beauty in
-          software isn't just about <strong>the pixels on the screen</strong>, but <strong>the elegant
-            simplicity</strong> of the logic behind it."
-        </blockquote>
-        <div class="philosophy-cols">
-          <div>
-            <p class="philosophy-col-label">AESTHETICS</p>
-            <p class="philosophy-col-text">Visual harmony reduces cognitive load. By applying principles of editorial
-              design — white space, hierarchy, and rhythm — we create interfaces that feel natural rather than
-              demanding.</p>
-          </div>
-          <div>
-            <p class="philosophy-col-label">LOGIC</p>
-            <p class="philosophy-col-text">System architecture is the skeleton of experience. A beautiful UI fails
-              without a performant, predictable, and resilient technical foundation that powers it.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modern Tooling -->
-      <div class="tooling reveal">
-        <div class="tooling-header">
-          <h3 class="tooling-title">Modern Tooling</h3>
-          <p class="tooling-sub">SELECTED INSTRUMENTS FOR DAILY CRAFT</p>
-        </div>
-        <div class="tooling-grid" role="list">
-
-          <div class="tool" role="listitem">
-            <div class="tool-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <path d="M9 12l2 2 4-4" />
-              </svg>
-            </div>
-            <p class="tool-category">ENVIRONMENT</p>
-            <p class="tool-name">VS Code</p>
-          </div>
-
-          <div class="tool" role="listitem">
-            <div class="tool-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="9" />
-                <path d="M12 3v9l4 4" />
-              </svg>
-            </div>
-            <p class="tool-category">DEPLOY</p>
-            <p class="tool-name">Vercel</p>
-          </div>
-
-          <div class="tool" role="listitem">
-            <div class="tool-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
-            </div>
-            <p class="tool-category">DESIGN</p>
-            <p class="tool-name">Figma</p>
-          </div>
-
-          <div class="tool" role="listitem">
-            <div class="tool-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="3" />
-                <path d="M19.07 4.93A10 10 0 0 0 4.93 19.07M4.93 4.93a10 10 0 0 0 14.14 14.14" />
-              </svg>
-            </div>
-            <p class="tool-category">VERSION</p>
-            <p class="tool-name">Git / GitHub</p>
-          </div>
-
-          <div class="tool" role="listitem">
-            <div class="tool-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-              </svg>
-            </div>
-            <p class="tool-category">QUERY</p>
-            <p class="tool-name">Postman</p>
-          </div>
-
-          <div class="tool" role="listitem">
-            <div class="tool-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path
-                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-              </svg>
-            </div>
-            <p class="tool-category">TESTING</p>
-            <p class="tool-name">Playwright</p>
-          </div>
-
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- ═══════════════════════════════════════
-         CONTACT SECTION
-    ═══════════════════════════════════════ -->
-    <section id="contact" class="section-contact" aria-labelledby="contact-heading">
-
-      <div class="contact-layout">
-
-        <!-- Left col -->
-        <div class="contact-left">
-          <p class="contact-label">INQUIRY</p>
-          <h2 id="contact-heading" class="contact-title">
-            Let's build<br>
-            something<br>
-            <em>extraordinary.</em>
-          </h2>
-          <p class="contact-avail-text">
-            Currently accepting new projects and strategic partnerships for the 2026 digital season.
-          </p>
-
-          <div class="contact-correspondence">
-            <p class="correspondence-label">CORRESPONDENCE</p>
-            <a href="mailto:olusanuemmanuel@gmail.com" class="correspondence-email">
-              olusanuemmanuel@gmail.com
-            </a>
-          </div>
-
-          <div class="contact-presence">
-            <p class="presence-label">DIGITAL PRESENCE</p>
-            <div class="presence-links">
-              <a href="https://www.linkedin.com/in/emmanuel-olusanu-511a74221" target="_blank"
-                rel="noopener noreferrer">LINKEDIN</a>
-              <span class="presence-divider" aria-hidden="true">·</span>
-              <a href="https://github.com/Lekantheboy" target="_blank" rel="noopener noreferrer">GITHUB</a>
-              <span class="presence-divider" aria-hidden="true">·</span>
-              <a href="asset/lekanResume.pdf" download>READ.CV</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right col — form -->
-        <div class="contact-right">
-          <form id="contact-form" action="https://formspree.io/f/xyzkpgdj" method="POST" class="contact-form"
-            novalidate>
-            <div class="form-field">
-              <label for="field-name" class="form-label">NAME / ENTITY</label>
-              <input type="text" id="field-name" name="name" placeholder="John Doe or Studio Inc." required
-                autocomplete="name">
-            </div>
-
-            <div class="form-field">
-              <label for="field-email" class="form-label">EMAIL ADDRESS</label>
-              <input type="email" id="field-email" name="email" placeholder="email@address.com" required
-                autocomplete="email">
-            </div>
-
-            <div class="form-field">
-              <label for="field-message" class="form-label">MESSAGE</label>
-              <textarea id="field-message" name="message" placeholder="Briefly describe your vision..." required
-                rows="4"></textarea>
-            </div>
-
-            <div class="form-footer">
-              <span class="form-availability">
-                <span class="availability-dot" aria-hidden="true"></span>
-                AVAILABLE FOR WORK
-              </span>
-              <button type="submit" class="btn-submit" id="submit-btn">
-                SEND PROPOSAL
-              </button>
-            </div>
-
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-
+        <a href="contact.html" class="home-cta-email">olusanuemmanuel@gmail.com</a>
+        <a href="work.html" class="home-cta-work-link">VIEW ALL WORK →</a>
       </div>
 
     </section>

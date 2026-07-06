@@ -1460,3 +1460,159 @@ section {
   }
   .btn-submit { width: 100%; text-align: center; }
 }
+
+/* ─── NEW: MULTI-PAGE & ANIMATIONS ───────────────────────────── */
+
+/* Page Hero (Work / About pages) */
+.page-hero-bar {
+  padding-block: var(--space-xl);
+  border-bottom: 1px solid var(--clr-border);
+  margin-bottom: var(--space-xl);
+}
+.page-hero-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--clr-muted-3);
+  margin-bottom: var(--space-sm);
+}
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.02em;
+}
+.page-hero-sub {
+  max-width: 600px;
+}
+
+/* Base fade up/down (CSS fallback for scroll-driven, also used on load) */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s var(--ease-out) forwards;
+}
+.animate-fade-down {
+  opacity: 0;
+  animation: fadeDown 0.8s var(--ease-out) forwards;
+}
+
+/* Staggered hero text */
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeUp 0.6s var(--ease-out) forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+.hero-em {
+  font-style: italic;
+}
+
+/* Marquee Strip */
+.marquee-strip {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+  padding-block: var(--space-sm);
+  background: var(--clr-surface);
+  white-space: nowrap;
+  display: flex;
+}
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-lg);
+  animation: marquee 20s linear infinite;
+  padding-left: var(--space-lg);
+}
+.marquee-track span {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--clr-muted-3);
+}
+.marquee-dot {
+  color: var(--clr-green) !important;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Contact Page specific */
+.section-contact--page {
+  position: relative;
+  min-height: 80vh;
+}
+.contact-blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: blobFlow 10s ease-in-out infinite alternate;
+}
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 108, 75, 0.15); /* Greenish */
+  top: -100px;
+  right: -100px;
+}
+.blob-2 {
+  width: 300px;
+  height: 300px;
+  background: rgba(161, 161, 170, 0.15); /* Muted */
+  bottom: -50px;
+  left: -50px;
+  animation-delay: -5s;
+}
+[data-theme="dark"] .blob {
+  opacity: 0.15;
+}
+@keyframes blobFlow {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-30px, 50px) scale(1.1); }
+}
+
+/* Optional: Scroll-driven parallax for projects */
+@supports (animation-timeline: scroll()) {
+  .project-card, .work-project, .competency {
+    animation: parallax linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+  }
+  @keyframes parallax {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    /* override intersection observer reveal if scroll-driven is supported */
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

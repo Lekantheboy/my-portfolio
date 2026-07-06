@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Lekan</title>
+  <meta name="description"
+    content="Get in touch with Lekan — Full-stack developer available for new projects and strategic partnerships.">
+  <link rel="icon" href="images/fav-icon.jpg" type="image/jpeg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Bricolage+Grotesque:opsz,wght@12..96,300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-nav" id="site-nav" role="banner">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Lekan — home">Lekan</a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="work.html" class="nav-link" id="nav-work">WORK</a></li>
+        <li><a href="about.html" class="nav-link" id="nav-about">ABOUT</a></li>
+        <li><a href="contact.html" class="nav-link is-active" id="nav-contact">CONTACT</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="contact.html" class="nav-availability" aria-label="Currently available for projects">
+          <span class="availability-dot" aria-hidden="true"></span>
+          AVAILABLE FOR PROJECTS
+        </a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" />
+            <path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="work.html" class="mobile-link">WORK</a></li>
+        <li><a href="about.html" class="mobile-link">ABOUT</a></li>
+        <li><a href="contact.html" class="mobile-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════════
+         CONTACT SECTION
+    ═══════════════════════════════════════ -->
+    <section id="contact" class="section-contact section-contact--page" aria-labelledby="contact-heading">
+
+      <!-- Animated background blob -->
+      <div class="contact-blob" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
+
+      <div class="contact-layout">
+
+        <!-- Left col -->
+        <div class="contact-left animate-fade-up">
+          <p class="contact-label">INQUIRY</p>
+          <h1 id="contact-heading" class="contact-title">
+            Let's build<br>
+            something<br>
+            <em>extraordinary.</em>
+          </h1>
+          <p class="contact-avail-text">
+            Currently accepting new projects and strategic partnerships for the 2026 digital season.
+          </p>
+
+          <div class="contact-correspondence">
+            <p class="correspondence-label">CORRESPONDENCE</p>
+            <a href="mailto:olusanuemmanuel@gmail.com" class="correspondence-email">
+              olusanuemmanuel@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-presence">
+            <p class="presence-label">DIGITAL PRESENCE</p>
+            <div class="presence-links">
+              <a href="https://www.linkedin.com/in/emmanuel-olusanu-511a74221" target="_blank"
+                rel="noopener noreferrer">LINKEDIN</a>
+              <span class="presence-divider" aria-hidden="true">·</span>
+              <a href="https://github.com/Lekantheboy" target="_blank" rel="noopener noreferrer">GITHUB</a>
+              <span class="presence-divider" aria-hidden="true">·</span>
+              <a href="asset/lekanResume.pdf" download>READ.CV</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right col — form -->
+        <div class="contact-right animate-fade-up" style="animation-delay: 0.15s">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-field">
+              <label for="field-name" class="form-label">NAME / ENTITY</label>
+              <input type="text" id="field-name" name="name" placeholder="John Doe or Studio Inc." required
+                autocomplete="name">
+            </div>
+
+            <div class="form-field">
+              <label for="field-email" class="form-label">EMAIL ADDRESS</label>
+              <input type="email" id="field-email" name="email" placeholder="email@address.com" required
+                autocomplete="email">
+            </div>
+
+            <div class="form-field">
+              <label for="field-subject" class="form-label">SUBJECT</label>
+              <input type="text" id="field-subject" name="subject" placeholder="Project Inquiry, Collaboration..." required>
+            </div>
+
+            <div class="form-field">
+              <label for="field-message" class="form-label">MESSAGE</label>
+              <textarea id="field-message" name="message" placeholder="Briefly describe your vision..." required
+                rows="4"></textarea>
+            </div>
+
+            <div class="form-footer">
+              <span class="form-availability">
+                <span class="availability-dot" aria-hidden="true"></span>
+                AVAILABLE FOR WORK
+              </span>
+              <button type="submit" class="btn-submit" id="submit-btn">
+                SEND PROPOSAL
+              </button>
+            </div>
+
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <span class="footer-logo">Lekan</span>
+    <p class="footer-copy">© 2026 Emmanuel Olusanu. Built with love.</p>
+    <div class="footer-socials" aria-label="Social media links">
+      <a href="https://www.linkedin.com/in/emmanuel-olusanu-511a74221" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LI</a>
+      <a href="https://github.com/Lekantheboy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
+      <a href="https://www.instagram.com/lekantheboy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

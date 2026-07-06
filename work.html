@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Lekan</title>
+  <meta name="description"
+    content="Selected projects and systems built by Lekan — full-stack web developer based in Abuja, Nigeria.">
+  <link rel="icon" href="images/fav-icon.jpg" type="image/jpeg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Bricolage+Grotesque:opsz,wght@12..96,300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-nav" id="site-nav" role="banner">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Lekan — home">Lekan</a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="work.html" class="nav-link is-active" id="nav-work">WORK</a></li>
+        <li><a href="about.html" class="nav-link" id="nav-about">ABOUT</a></li>
+        <li><a href="contact.html" class="nav-link" id="nav-contact">CONTACT</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="contact.html" class="nav-availability" aria-label="Currently available for projects">
+          <span class="availability-dot" aria-hidden="true"></span>
+          AVAILABLE FOR PROJECTS
+        </a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" />
+            <path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="work.html" class="mobile-link">WORK</a></li>
+        <li><a href="about.html" class="mobile-link">ABOUT</a></li>
+        <li><a href="contact.html" class="mobile-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════════
+         WORK SECTION
+    ═══════════════════════════════════════ -->
+    <section id="work" class="section-work" aria-labelledby="work-heading">
+
+      <!-- Page hero bar -->
+      <div class="page-hero-bar animate-fade-up">
+        <p class="page-hero-label">SELECTED WORKS</p>
+        <h1 id="work-heading" class="page-hero-title">
+          Systems &amp;<br>
+          <em>Logic</em>
+        </h1>
+        <p class="page-hero-sub text-body">An inquiry into high-performance web architectures and the craft of clean execution. From authentication systems to real-time data pipelines.</p>
+      </div>
+
+      <div class="work-header">
+        <div class="work-header-left">
+          <p class="work-label">SELECTED WORKS 2022–2024</p>
+          <h2 class="work-title visually-hidden">Selected Systems &amp; Logic</h2>
+        </div>
+      </div>
+
+      <!-- Work projects -->
+      <div class="work-projects">
+
+        <!-- Row 1: Large left image + right text (Bloom Academy LMS — FEATURED) -->
+        <article class="work-project work-project--row-hero reveal" aria-labelledby="wp0-title">
+          <div class="work-project-image">
+            <img src="images/bloom_academy.png" alt="Bloom Academy LMS" loading="eager" class="img-bw">
+          </div>
+          <div class="work-project-details">
+            <div class="work-project-meta">
+              <span class="wp-tag wp-tag--live">● LIVE</span>
+              <span class="wp-tag">FULLSTACK</span>
+              <span class="wp-tag">REACT</span>
+              <span class="wp-tag">NODE.JS</span>
+            </div>
+            <h3 id="wp0-title" class="wp-title">Bloom Academy LMS</h3>
+            <p class="wp-desc text-body">A full multi-tenant Learning Management System built entirely solo — from
+              architecture to deployment. Supports multiple institutions each with their own branding, courses,
+              instructors, and students. Features include course builder, assessment engine, certification, payment
+              integration, discussion forums, and real-time notifications.</p>
+            <div class="wp-sub-details">
+              <div><p class="wp-sub-label">PLATFORM</p><p class="wp-sub-value">React / Node.js / PostgreSQL</p></div>
+              <div><p class="wp-sub-label">DOMAIN</p><p class="wp-sub-value">EdTech / SaaS</p></div>
+              <div><p class="wp-sub-label">BUILT BY</p><p class="wp-sub-value">Solo — Full Stack</p></div>
+            </div>
+            <a href="https://app.bloomacademyafrica.com" target="_blank" rel="noopener noreferrer" class="wp-link">VIEW LIVE PRODUCT →</a>
+          </div>
+        </article>
+
+        <!-- Row 2: Small image top-right, text left + below (Special Foundation) -->
+        <article class="work-project work-project--row-offset reveal" aria-labelledby="wp1-title">
+          <div class="work-project-details">
+            <div class="work-project-meta">
+              <span class="wp-tag">FULLSTACK</span>
+              <span class="wp-tag">LARAVEL</span>
+              <span class="wp-tag">REACT</span>
+            </div>
+            <h3 id="wp1-title" class="wp-title">Special Foundation</h3>
+            <p class="wp-desc text-body">A foundation platform empowering young African leaders through education and
+              leadership opportunities. Features admin authentication, dynamic content management, analytics dashboard,
+              and a full event management system.</p>
+            <div class="wp-sub-details">
+              <div><p class="wp-sub-label">PLATFORM</p><p class="wp-sub-value">Laravel / PHP</p></div>
+              <div><p class="wp-sub-label">DOMAIN</p><p class="wp-sub-value">Education / NGO</p></div>
+            </div>
+            <a href="https://thespecialfoundation.org" target="_blank" rel="noopener noreferrer" class="wp-link">SOURCE WORK →</a>
+          </div>
+          <div class="work-project-image">
+            <img src="images/Screenshot1.png" alt="Special Foundation platform" loading="lazy" class="img-bw">
+          </div>
+        </article>
+
+        <!-- Row 3: Featured hero full-width (Billing.ad) -->
+        <article class="work-project work-project--row-featured reveal" aria-labelledby="wp2-title">
+          <div class="work-project-image">
+            <img src="images/billing.png" alt="Billing.ad financial platform" loading="lazy" class="img-bw">
+            <div class="work-featured-overlay">
+              <div class="work-project-meta">
+                <span class="wp-tag wp-tag--light">FULLSTACK</span>
+                <span class="wp-tag wp-tag--light">REACT</span>
+                <span class="wp-tag wp-tag--light">NODE.JS</span>
+              </div>
+              <h3 id="wp2-title" class="wp-title">Billing.ad</h3>
+              <p class="wp-desc text-body">A comprehensive financial platform for secure money management, payments, and
+                currency conversion. Built with multi-auth, Google OAuth, Flutterwave, 2FA.</p>
+              <a href="#" class="wp-link">IN DEVELOPMENT →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 4: Two-column side-by-side (Bloom Digit + SharePadi) -->
+        <div class="work-project work-project--row-pair reveal">
+          <article aria-labelledby="wp3-title" class="work-pair-item">
+            <div class="work-project-image">
+              <img src="images/bloom.png" alt="Bloom Digital Media website" loading="lazy" class="img-bw">
+            </div>
+            <div class="work-project-details">
+              <div class="work-project-meta">
+                <span class="wp-tag">FRONTEND</span>
+                <span class="wp-tag">JAVASCRIPT</span>
+              </div>
+              <h3 id="wp3-title" class="wp-title">Bloom Digital Media</h3>
+              <p class="wp-desc text-body">The official digital presence for one of Nigeria's leading advertising
+                agencies. Includes appointment booking, newsletter integration, and a full email notification system.</p>
+              <a href="https://bloomdigitmedia.com" target="_blank" rel="noopener noreferrer" class="wp-link">SOURCE WORK →</a>
+            </div>
+          </article>
+          <article aria-labelledby="wp4-title" class="work-pair-item">
+            <div class="work-project-image">
+              <img src="images/Screenshot4.png" alt="SharePadi platform" loading="lazy" class="img-bw">
+            </div>
+            <div class="work-project-details">
+              <div class="work-project-meta">
+                <span class="wp-tag">FRONTEND</span>
+                <span class="wp-tag">TAILWIND</span>
+              </div>
+              <h3 id="wp4-title" class="wp-title">SharePadi</h3>
+              <p class="wp-desc text-body">An affordable advertising solution for marketing campaigns, making
+                professional promotion accessible to Nigerian businesses of all sizes.</p>
+              <a href="https://Sharepadi.bloomdigitmedia.com" target="_blank" rel="noopener noreferrer" class="wp-link">SOURCE WORK →</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- Work quote -->
+      <blockquote class="work-quote reveal">
+        <p>"Complexity is the enemy of reliability. The best systems are those that vanish into their own efficiency."
+        </p>
+      </blockquote>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <span class="footer-logo">Lekan</span>
+    <p class="footer-copy">© 2026 Emmanuel Olusanu. Built with love.</p>
+    <div class="footer-socials" aria-label="Social media links">
+      <a href="https://www.linkedin.com/in/emmanuel-olusanu-511a74221" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LI</a>
+      <a href="https://github.com/Lekantheboy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
+      <a href="https://www.instagram.com/lekantheboy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
