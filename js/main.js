@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Works on GitHub Pages (no backend needed).
   // Log in to https://formspree.io and confirm the receiving email
   // is set to olusanuemmanuel@gmail.com in your form settings.
-  const FORMSPREE_URL = 'https://formspree.io/f/xyzkpgdj';
+  const FORMSPREE_URL = 'https://formspree.io/f/mvzjleqj';
 
   const form      = document.getElementById('contact-form');
   const statusEl  = document.getElementById('form-status');
