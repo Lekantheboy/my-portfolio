@@ -118,16 +118,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ─── 6. CONTACT FORM — POST to Express API ──────────────
+  // ─── 6. CONTACT FORM — Formspree ────────────────────────
+  // Works on GitHub Pages (no backend needed).
+  // Log in to https://formspree.io and confirm the receiving email
+  // is set to olusanuemmanuel@gmail.com in your form settings.
+  const FORMSPREE_URL = 'https://formspree.io/f/xyzkpgdj';
+
   const form      = document.getElementById('contact-form');
   const statusEl  = document.getElementById('form-status');
   const submitBtn = document.getElementById('submit-btn');
-
-  // API endpoint — swap this to your Render URL in production
-  // e.g. 'https://lekan-portfolio-api.onrender.com/api/contact'
-  const API_URL = window.location.hostname === 'localhost'
-    ? '/api/contact'
-    : 'https://lekan-portfolio-api.onrender.com/api/contact';
 
   if (form) {
     form.addEventListener('submit', async (e) => {
@@ -153,19 +152,26 @@ document.addEventListener('DOMContentLoaded', () => {
       clearStatus();
 
       try {
-        const response = await fetch(API_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email, subject, message }),
-        });
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('_subject', `Portfolio Inquiry: ${subject}`);
+        formData.append('message', message);
 
-        const data = await response.json();
+        const response = await fetch(FORMSPREE_URL, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' },
+        });
 
         if (response.ok) {
           showStatus('✓ Message sent. I\'ll be in touch soon.');
           form.reset();
         } else {
-          showStatus(data.message || 'Something went wrong. Please try again.', true);
+          const data = await response.json().catch(() => ({}));
+          const msg = data?.errors?.map(err => err.message).join(', ')
+            ?? 'Something went wrong. Please try again.';
+          showStatus(msg, true);
         }
       } catch {
         showStatus('Network error. Please check your connection and try again.', true);
@@ -175,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
 
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
