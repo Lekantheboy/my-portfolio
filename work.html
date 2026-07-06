@@ -12,6 +12,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Bricolage+Grotesque:opsz,wght@12..96,300;400;500;600&display=swap"
     rel="stylesheet">
@@ -38,15 +39,19 @@
           AVAILABLE FOR PROJECTS
         </a>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
           </svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            aria-hidden="true">
             <circle cx="12" cy="12" r="5" />
-            <path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            <path stroke-linecap="round"
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
           </svg>
         </button>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"
+          aria-controls="mobile-menu">
           <span></span><span></span>
         </button>
       </div>
@@ -68,14 +73,20 @@
     ═══════════════════════════════════════ -->
     <section id="work" class="section-work" aria-labelledby="work-heading">
 
-      <!-- Page hero bar -->
-      <div class="page-hero-bar animate-fade-up">
-        <p class="page-hero-label">SELECTED WORKS</p>
-        <h1 id="work-heading" class="page-hero-title">
-          Systems &amp;<br>
-          <em>Logic</em>
+      <!-- Page hero -->
+      <div class="home-hero">
+        <div class="hero-meta animate-fade-down">
+          <span class="meta-tag">SELECTED WORKS</span>
+        </div>
+        <h1 id="work-heading" class="hero-title">
+          <span class="hero-word" style="--i:0">Systems</span>
+          <span class="hero-word" style="--i:1">&amp;</span><br>
+          <em class="hero-word hero-em" style="--i:2">Logic</em>
         </h1>
-        <p class="page-hero-sub text-body">An inquiry into high-performance web architectures and the craft of clean execution. From authentication systems to real-time data pipelines.</p>
+        <div class="hero-sub-row animate-fade-up" style="animation-delay: 0.3s">
+          <p class="hero-sub text-body">An inquiry into high-performance web architectures and the craft of clean
+            execution. From authentication systems to real-time data pipelines.</p>
+        </div>
       </div>
 
       <div class="work-header">
@@ -106,11 +117,21 @@
               instructors, and students. Features include course builder, assessment engine, certification, payment
               integration, discussion forums, and real-time notifications.</p>
             <div class="wp-sub-details">
-              <div><p class="wp-sub-label">PLATFORM</p><p class="wp-sub-value">React / Node.js / PostgreSQL</p></div>
-              <div><p class="wp-sub-label">DOMAIN</p><p class="wp-sub-value">EdTech / SaaS</p></div>
-              <div><p class="wp-sub-label">BUILT BY</p><p class="wp-sub-value">Solo — Full Stack</p></div>
+              <div>
+                <p class="wp-sub-label">PLATFORM</p>
+                <p class="wp-sub-value">React / Node.js / PostgreSQL</p>
+              </div>
+              <div>
+                <p class="wp-sub-label">DOMAIN</p>
+                <p class="wp-sub-value">EdTech / SaaS</p>
+              </div>
+              <div>
+                <p class="wp-sub-label">BUILT BY</p>
+                <p class="wp-sub-value">Solo — Full Stack</p>
+              </div>
             </div>
-            <a href="https://app.bloomacademyafrica.com" target="_blank" rel="noopener noreferrer" class="wp-link">VIEW LIVE PRODUCT →</a>
+            <a href="https://app.bloomacademyafrica.com" target="_blank" rel="noopener noreferrer" class="wp-link">VIEW
+              LIVE PRODUCT →</a>
           </div>
         </article>
 
@@ -127,10 +148,17 @@
               leadership opportunities. Features admin authentication, dynamic content management, analytics dashboard,
               and a full event management system.</p>
             <div class="wp-sub-details">
-              <div><p class="wp-sub-label">PLATFORM</p><p class="wp-sub-value">Laravel / PHP</p></div>
-              <div><p class="wp-sub-label">DOMAIN</p><p class="wp-sub-value">Education / NGO</p></div>
+              <div>
+                <p class="wp-sub-label">PLATFORM</p>
+                <p class="wp-sub-value">Laravel / PHP</p>
+              </div>
+              <div>
+                <p class="wp-sub-label">DOMAIN</p>
+                <p class="wp-sub-value">Education / NGO</p>
+              </div>
             </div>
-            <a href="https://thespecialfoundation.org" target="_blank" rel="noopener noreferrer" class="wp-link">SOURCE WORK →</a>
+            <a href="https://thespecialfoundation.org" target="_blank" rel="noopener noreferrer" class="wp-link">SOURCE
+              WORK →</a>
           </div>
           <div class="work-project-image">
             <img src="images/Screenshot1.png" alt="Special Foundation platform" loading="lazy" class="img-bw">
@@ -168,8 +196,10 @@
               </div>
               <h3 id="wp3-title" class="wp-title">Bloom Digital Media</h3>
               <p class="wp-desc text-body">The official digital presence for one of Nigeria's leading advertising
-                agencies. Includes appointment booking, newsletter integration, and a full email notification system.</p>
-              <a href="https://bloomdigitmedia.com" target="_blank" rel="noopener noreferrer" class="wp-link">SOURCE WORK →</a>
+                agencies. Includes appointment booking, newsletter integration, and a full email notification system.
+              </p>
+              <a href="https://bloomdigitmedia.com" target="_blank" rel="noopener noreferrer" class="wp-link">SOURCE
+                WORK →</a>
             </div>
           </article>
           <article aria-labelledby="wp4-title" class="work-pair-item">
@@ -184,7 +214,8 @@
               <h3 id="wp4-title" class="wp-title">SharePadi</h3>
               <p class="wp-desc text-body">An affordable advertising solution for marketing campaigns, making
                 professional promotion accessible to Nigerian businesses of all sizes.</p>
-              <a href="https://Sharepadi.bloomdigitmedia.com" target="_blank" rel="noopener noreferrer" class="wp-link">SOURCE WORK →</a>
+              <a href="https://Sharepadi.bloomdigitmedia.com" target="_blank" rel="noopener noreferrer"
+                class="wp-link">SOURCE WORK →</a>
             </div>
           </article>
         </div>
@@ -205,9 +236,11 @@
     <span class="footer-logo">Lekan</span>
     <p class="footer-copy">© 2026 Emmanuel Olusanu. Built with love.</p>
     <div class="footer-socials" aria-label="Social media links">
-      <a href="https://www.linkedin.com/in/emmanuel-olusanu-511a74221" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LI</a>
+      <a href="https://www.linkedin.com/in/emmanuel-olusanu-511a74221" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn">LI</a>
       <a href="https://github.com/Lekantheboy" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
-      <a href="https://www.instagram.com/lekantheboy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+      <a href="https://www.instagram.com/lekantheboy" target="_blank" rel="noopener noreferrer"
+        aria-label="Instagram">IG</a>
     </div>
   </footer>
 

@@ -321,13 +321,22 @@ section {
   margin-inline: auto;
 }
 
+/* Sub-page sections — explicit so they never lose their padding */
+.section-work,
+.section-about,
+.section-contact {
+  padding-top: calc(var(--nav-h) + var(--space-xl));
+  padding-inline: var(--space-lg);
+  max-width: var(--max-w);
+  margin-inline: auto;
+}
 
 /* ─── 6. HOME ────────────────────────────────────────────── */
 .section-home {
   padding-top: calc(var(--nav-h) + var(--space-xl));
 }
 
-/* Hero */
+/* Hero — shared across Home, Work, About pages */
 .home-hero {
   padding-block: var(--space-xl) var(--space-2xl);
   border-bottom: 1px solid var(--clr-border);
@@ -601,9 +610,6 @@ section {
 /* ─── 7. WORK ────────────────────────────────────────────── */
 .section-work {
   background: var(--clr-bg);
-  border-top: 1px solid var(--clr-border);
-  max-width: 100%;
-  padding-inline: 0;
 }
 
 .work-header {
@@ -1461,7 +1467,283 @@ section {
   .btn-submit { width: 100%; text-align: center; }
 }
 
-/* ─── NEW: MULTI-PAGE & ANIMATIONS ───────────────────────────── */
+/* ══════════════════════════════════════════════════
+   NEW: MULTI-PAGE + RICH ANIMATIONS
+══════════════════════════════════════════════════ */
+
+/* Visually hidden (accessibility) */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+/* "View all work" link on homepage */
+.home-cta-work-link {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--clr-muted-3);
+  border-bottom: 1px solid transparent;
+  transition: color var(--dur-fast), border-color var(--dur-fast);
+}
+.home-cta-work-link:hover {
+  color: var(--clr-text);
+  border-bottom-color: var(--clr-text);
+}
+
+/* ── KEYFRAME LIBRARY ─────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+/* Text wipe (clip-path reveal from left) */
+@keyframes wipeRight {
+  from { clip-path: inset(0 100% 0 0); opacity: 1; }
+  to   { clip-path: inset(0 0% 0 0);   opacity: 1; }
+}
+/* Slide in from left */
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+/* Scale up */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+/* Blob float */
+@keyframes blobFlow {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-30px, 50px) scale(1.12); }
+}
+
+/* ── LOAD ANIMATION UTILITIES ─────────────────── */
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s var(--ease-out) forwards;
+}
+.animate-fade-down {
+  opacity: 0;
+  animation: fadeDown 0.8s var(--ease-out) forwards;
+}
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.7s var(--ease-out) forwards;
+}
+
+/* ── STAGGERED HERO WORDS ─────────────────────── */
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeUp 0.65s var(--ease-out) forwards;
+  animation-delay: calc(0.08s * var(--i, 0));
+}
+.hero-em { font-style: italic; }
+
+/* ── WORK LABEL — clip wipe on load ─────────────── */
+.work-label {
+  clip-path: inset(0 100% 0 0);
+  animation: wipeRight 0.7s var(--ease-out) 0.4s forwards;
+}
+
+/* ── PROJECT IMAGES — scale on hover ─────────────── */
+.project-card-image-wrap,
+.work-project-image {
+  overflow: hidden;
+  border-radius: 2px;
+}
+.project-card-image-wrap img,
+.work-project-image img {
+  transition: transform 0.7s var(--ease-out), filter 0.5s ease;
+  will-change: transform, filter;
+}
+.project-card:hover .project-card-image-wrap img,
+.work-project:hover .work-project-image img {
+  transform: scale(1.05);
+}
+
+/* ── WP-TITLE — underline draw on project hover ── */
+.wp-title {
+  position: relative;
+  display: inline-block;
+}
+.wp-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 100%; height: 1px;
+  background: var(--clr-text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+.work-project:hover .wp-title::after { transform: scaleX(1); }
+
+/* ── AVAILABILITY DOT PULSE ──────────────────── */
+.availability-dot {
+  animation: none; /* reset — use the existing one */
+}
+
+/* ── MARQUEE STRIP ───────────────────────────── */
+.marquee-strip {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  overflow: hidden;
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+  padding-block: var(--space-sm);
+  background: var(--clr-surface);
+  white-space: nowrap;
+  display: flex;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-lg);
+  animation: marquee 22s linear infinite;
+  padding-left: var(--space-lg);
+}
+.marquee-track span {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--clr-muted-3);
+  font-weight: 400;
+}
+.marquee-dot { color: var(--clr-green) !important; }
+
+/* ── CONTACT BLOB ────────────────────────────── */
+.section-contact--page {
+  position: relative;
+  min-height: 80vh;
+}
+.contact-blob {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+  animation: blobFlow 12s ease-in-out infinite alternate;
+}
+.blob-1 {
+  width: 440px; height: 440px;
+  background: radial-gradient(circle, rgba(0,108,75,0.25), transparent 70%);
+  top: -120px; right: -80px;
+}
+.blob-2 {
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(161,161,170,0.2), transparent 70%);
+  bottom: -60px; left: -40px;
+  animation-delay: -6s;
+}
+[data-theme="dark"] .blob { opacity: 0.12; }
+
+/* ── SCROLL-DRIVEN ANIMATIONS (Chrome 115+) ──── */
+/* Each element animates itself as it enters the viewport.
+   Falls back to the IntersectionObserver `.reveal` system on other browsers. */
+@supports (animation-timeline: scroll()) {
+
+  /* Section labels */
+  .work-label,
+  .contact-label {
+    animation: wipeRight linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 45%;
+  }
+
+  /* Homepage project cards */
+  .project-card {
+    animation: fadeUp linear both;
+    animation-timeline: view();
+    animation-range: entry 5% entry 40%;
+  }
+
+  /* Work page rows */
+  .work-project--row-hero,
+  .work-project--row-offset,
+  .work-project--row-featured,
+  .work-project--row-pair {
+    animation: fadeUp linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+
+  /* Competency cards — scale in */
+  .competency {
+    animation: scaleIn linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+
+  /* Philosophy section — slide from left */
+  .philosophy {
+    animation: slideLeft linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 45%;
+  }
+
+  /* Tooling grid items — fade in */
+  .tool {
+    animation: fadeIn linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 55%;
+  }
+
+  /* Work quote */
+  .work-quote {
+    animation: fadeUp linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+  }
+
+  /* Contact left/right cols */
+  .contact-left {
+    animation: slideLeft linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+  }
+  .contact-right {
+    animation: fadeUp linear both;
+    animation-timeline: view();
+    animation-range: entry 5% entry 50%;
+  }
+
+  /* Disable IntersectionObserver reveals when scroll-driven is active */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 
 /* Page Hero (Work / About pages) */
 .page-hero-bar {
