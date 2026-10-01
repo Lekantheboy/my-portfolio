@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showStatus('Network error. Please check your connection and try again.', true);
       } finally {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'SEND PROPOSAL';
+        submitBtn.textContent = 'SEND MESSAGE';
       }
     });
   }
