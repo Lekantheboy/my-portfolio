@@ -36,7 +36,7 @@
       <div class="nav-right">
         <a href="contact.html" class="nav-availability" aria-label="Currently available for projects">
           <span class="availability-dot" aria-hidden="true"></span>
-          AVAILABLE FOR PROJECTS
+          OPEN TO NEW ROLES
         </a>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -84,14 +84,14 @@
           <em class="hero-word hero-em" style="--i:2">Logic</em>
         </h1>
         <div class="hero-sub-row animate-fade-up" style="animation-delay: 0.3s">
-          <p class="hero-sub text-body">An inquiry into high-performance web architectures and the craft of clean
-            execution. From authentication systems to real-time data pipelines.</p>
+          <p class="hero-sub text-body">Production systems I build and keep running — multi-tenant platforms, payment
+            integrations, and AI features that ship to real users.</p>
         </div>
       </div>
 
       <div class="work-header">
         <div class="work-header-left">
-          <p class="work-label">SELECTED WORKS 2022–2024</p>
+          <p class="work-label">SELECTED WORKS 2024–2026</p>
           <h2 class="work-title visually-hidden">Selected Systems &amp; Logic</h2>
         </div>
       </div>
@@ -115,11 +115,11 @@
             <p class="wp-desc text-body">A full multi-tenant Learning Management System built entirely solo — from
               architecture to deployment. Supports multiple institutions each with their own branding, courses,
               instructors, and students. Features include course builder, assessment engine, certification, payment
-              integration, discussion forums, and real-time notifications.</p>
+              integration, and discussion forums.</p>
             <div class="wp-sub-details">
               <div>
                 <p class="wp-sub-label">PLATFORM</p>
-                <p class="wp-sub-value">React / Node.js / PostgreSQL</p>
+                <p class="wp-sub-value">React / Node.js / MySQL</p>
               </div>
               <div>
                 <p class="wp-sub-label">DOMAIN</p>
@@ -218,6 +218,92 @@
                 class="wp-link">SOURCE WORK →</a>
             </div>
           </article>
+
+        <!-- Recent work: platforms I build and maintain at Bloom Digital Media -->
+        <article class="work-project work-project--row-offset reveal" style="grid-template-columns: 1fr;" aria-labelledby="wp-ai-title">
+          <div class="work-project-details">
+            <div class="work-project-meta">
+              <span class="wp-tag">AI</span>
+              <span class="wp-tag">NEXT.JS</span>
+              <span class="wp-tag">NODE.JS</span>
+              <span class="wp-tag">POSTGRESQL</span>
+            </div>
+            <h3 id="wp-ai-title" class="wp-title">Social Media Automation Platform</h3>
+            <p class="wp-desc text-body">Lead engineer on a multi-tenant scheduling and publishing platform for
+              agencies. I scaffolded both the Next.js dashboard and the Node/Express API, isolated tenants at the
+              database level with PostgreSQL row-level security, and built scheduled publishing to Instagram with
+              idempotency guards and automatic token refresh. I also built its AI layer: captions and branded imagery
+              generated through a provider-agnostic gateway, with cost and failures recorded per request and an
+              automated check that verifies generated output before anyone sees it.</p>
+            <div class="wp-sub-details">
+              <div>
+                <p class="wp-sub-label">PLATFORM</p>
+                <p class="wp-sub-value">Next.js / Express / Prisma / BullMQ</p>
+              </div>
+              <div>
+                <p class="wp-sub-label">DOMAIN</p>
+                <p class="wp-sub-value">MarTech / SaaS</p>
+              </div>
+              <div>
+                <p class="wp-sub-label">ROLE</p>
+                <p class="wp-sub-value">Lead Engineer</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-project work-project--row-offset reveal" style="grid-template-columns: 1fr;" aria-labelledby="wp-ems-title">
+          <div class="work-project-details">
+            <div class="work-project-meta">
+              <span class="wp-tag">FULLSTACK</span>
+              <span class="wp-tag">NEXT.JS</span>
+              <span class="wp-tag">PRISMA</span>
+            </div>
+            <h3 id="wp-ems-title" class="wp-title">Enterprise Management System — Accounting</h3>
+            <p class="wp-desc text-body">I own the chart-of-accounts module of an internal enterprise platform:
+              hierarchical accounts, sub-account types, pooled accounts, manual journal entries and void handling,
+              built and refined under accountant review. I also delivered the recruitment/ATS and knowledge base
+              modules, including a rich-text authoring pipeline and real-time notifications over Socket.io.</p>
+            <div class="wp-sub-details">
+              <div>
+                <p class="wp-sub-label">PLATFORM</p>
+                <p class="wp-sub-value">Next.js / Express / PostgreSQL</p>
+              </div>
+              <div>
+                <p class="wp-sub-label">DOMAIN</p>
+                <p class="wp-sub-value">Enterprise / Internal Tools</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-project work-project--row-offset reveal" style="grid-template-columns: 1fr;" aria-labelledby="wp-ussd-title">
+          <div class="work-project-details">
+            <div class="work-project-meta">
+              <span class="wp-tag">FINTECH</span>
+              <span class="wp-tag">TYPESCRIPT</span>
+              <span class="wp-tag">POSTGRESQL</span>
+            </div>
+            <h3 id="wp-ussd-title" class="wp-title">USSD Payments Platform</h3>
+            <p class="wp-desc text-body">Backend engineer on a USSD service giving smallholder farmers crop insurance
+              and payments from basic feature phones — no smartphone, no internet. I built the disbursement service end
+              to end: data model, REST API, OTP-authorised payouts, provider reconciliation and bulk disbursement, with
+              the matching admin interface. I integrated dedicated virtual accounts so farmers could fund wallets by
+              bank transfer straight from the USSD menu, and shipped telemetry endpoints for user, policy and revenue
+              reporting.</p>
+            <div class="wp-sub-details">
+              <div>
+                <p class="wp-sub-label">PLATFORM</p>
+                <p class="wp-sub-value">Node.js / TypeScript / Prisma / Redis</p>
+              </div>
+              <div>
+                <p class="wp-sub-label">DOMAIN</p>
+                <p class="wp-sub-value">Fintech / Agriculture</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
         </div>
 
       </div>
